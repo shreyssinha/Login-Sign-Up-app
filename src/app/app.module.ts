@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { AuthService } from './auth.service';
 import { routes } from './app.routes';
 import { FacebookLoginProvider, SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
+import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCzZtOKNBsfFllb0zcEfY95VYMw204OXaY",
@@ -49,6 +50,7 @@ export const firebaseConfig = {
   ],
   providers: [
     AuthService,
+    {provide : LocationStrategy , useClass: HashLocationStrategy},
     {
       provide: 'SocialAuthServiceConfig',
       useValue: {
