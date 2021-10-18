@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "firestore-64697": {
+      "hosting": {
+        "firestore": [
+          "firestore-64697"
+        ]
+      }
+    }
+  }
+}
